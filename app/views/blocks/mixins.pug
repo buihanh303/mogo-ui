@@ -1,0 +1,6 @@
+mixin ListItem(content="content list", contentLink)
+  li.item= content
+    if contentLink
+      a.item-link= contentLink
+    if block
+      block
