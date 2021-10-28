@@ -4,3 +4,12 @@ mixin ListItem(content="content list", contentLink)
       a.item-link= contentLink
     if block
       block
+
+mixin menuItem(title, href="#")
+  li.header-menu-item
+    a.header-menu-link(href= href)= title
+
+mixin headerSlide(title, number, className="header-bottom-item")
+  div(class= className)
+    span.header-bottom-number= number
+    span.header-bottom-text= title

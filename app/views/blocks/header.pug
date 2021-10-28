@@ -1,0 +1,26 @@
+header.header
+  .container 
+    .header-top
+      a.header-logo(href="index.html") MoGo
+      i.fa.fa-bars.header-toggle
+      ul.header-menu
+        +menuItem("About")
+        +menuItem("Service")
+        +menuItem("Work")
+        +menuItem("Blog")
+        +menuItem("Contact")
+        li.header-menu-item
+          a.header-menu-icon(href="#") 
+            i.fa.fa-shopping-cart
+        li.header-menu-item 
+          a.header-menu-icon(href="#") 
+            i.fa.fa-search
+    .header-content 
+      h2.header-content-caption Creative Template 
+      h1.header-content-main welcome to mogo
+      a.header-content-more(href="#") learn more
+    .header-bottom
+      +headerSlide("intro", "01", "header-bottom-item is-active")
+      +headerSlide("work", "02")
+      +headerSlide("about", "03")
+      +headerSlide("contact", "04")
