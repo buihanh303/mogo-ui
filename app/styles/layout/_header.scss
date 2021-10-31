@@ -75,13 +75,11 @@
     margin-top: 15.8rem;
     padding-bottom: 2.7rem;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
   }
   &-bottom-item {
     padding-top: 2.5rem;
     border-top: 3px solid white;
-    width: calc(25% - 3rem);
+    width: 25%;
     cursor: pointer;
     position: relative;
     opacity: 0.6;
@@ -118,7 +116,7 @@
     display: none;
     font-size: 2.5rem;
   }
-  @media screen and (max-width: 1023px) {
+  @include maxWidth(1023px) {
     min-height: unset;
     &-content-caption {
       font-size: 6.2rem;
@@ -133,7 +131,7 @@
       margin-top: 10rem;
     }
   }
-  @media screen and (min-width: 768px) {
+  @include minWidth(768px) {
     &-menu-item:not(:last-child) {
       margin-right: 5.5rem;
     }
@@ -154,7 +152,7 @@
       }
     }
   }
-  @media screen and (max-width: 767px) {
+  @include maxWidth(767px) {
     &-menu,
     &-bottom-text {
       display: none;

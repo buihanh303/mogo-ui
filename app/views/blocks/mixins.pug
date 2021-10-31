@@ -1,15 +1,29 @@
 mixin ListItem(content="content list", contentLink)
-  li.item= content
-    if contentLink
-      a.item-link= contentLink
-    if block
-      block
+	li.item= content
+		if contentLink
+			a.item-link= contentLink
+		if block
+			block
 
 mixin menuItem(title, href="#")
-  li.header-menu-item
-    a.header-menu-link(href= href)= title
+	li.header-menu-item
+		a.header-menu-link(href= href)= title
 
 mixin headerSlide(title, number, className="header-bottom-item")
-  div(class= className)
-    span.header-bottom-number= number
-    span.header-bottom-text= title
+	div(class= className)
+		span.header-bottom-number= number
+		span.header-bottom-text= title
+
+mixin blockBox(caption, title, desc)
+	.block-box
+		h3.block-box-caption= caption 
+		h2.block-box-heading= title 
+		if desc 
+			p.block-box-desc= desc
+
+mixin aboutItem(src, title, classIcon)
+	.about-item 
+		img.about-image(src= src)
+		.about-content 
+			i.about-icon(class= classIcon)
+			span.about-title= title
