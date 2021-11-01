@@ -3,8 +3,8 @@
   height: $height;
 }
 
-@mixin absolutePosition($direction: "center") {
-  position: absolute;
+@mixin absolutePosition($direction: "center", $position: absolute) {
+  position: $position;
   @if $direction == "center" {
     top: 50%;
     left: 50%;
@@ -59,5 +59,5 @@
   width: $size;
   max-width: $size;
   white-space: pre-wrap;
-  word-break: break-all;
+  word-break: break-word;
 }

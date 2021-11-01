@@ -333,7 +333,7 @@ body {
     width: 100%;
     max-width: 100%;
     white-space: pre-wrap;
-    word-break: break-all; }
+    word-break: break-word; }
   .about-icon {
     font-size: 2.5rem; }
   .about-item:hover {
@@ -366,3 +366,139 @@ body {
           display: none; }
       .about-item {
         scroll-snap-align: center; } }
+
+.number {
+  background-color: #95e1d3; }
+  .number-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch; }
+  .number-item {
+    padding: 9rem 0;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    border-left: 1px solid white;
+    width: 20%; }
+  .number-item:last-child {
+    border-right: 1px solid white; }
+  .number-item-count {
+    font-size: 7.2rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    line-height: 53px; }
+  @media screen and (max-width: 1023px) {
+    .number-item {
+      padding: 6rem 0; }
+    .number-item-count {
+      font-size: 6rem;
+      margin-bottom: 1.5rem; }
+    .number-item-text {
+      line-height: 1.4;
+      font-size: 1.2rem; } }
+  @media screen and (max-width: 767px) {
+    .number-list {
+      display: block; }
+    .number-item {
+      width: 100%;
+      border: none;
+      padding: 2rem 0;
+      border-bottom: 1px solid white; }
+    .number-item:last-child {
+      border-right: none;
+      border-bottom: none; } }
+
+.service {
+  padding: 11rem 0 12rem; }
+  .service-container {
+    margin-top: 6.5rem; }
+  .service-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 2rem; }
+  .service-list:first-of-type {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5rem;
+    margin-bottom: 5rem; }
+  .service-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    width: 33.33%; }
+  .service-item:not(:first-child) {
+    margin-left: 6.5rem; }
+  .service-item-info {
+    margin-left: 2.7rem; }
+  .service-item-title {
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    color: black;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    max-width: 100%;
+    white-space: pre-wrap;
+    word-break: break-word; }
+  .service-item-text {
+    color: #999999;
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.4;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    max-width: 100%;
+    white-space: pre-wrap;
+    word-break: break-word; }
+  @media screen and (max-width: 1023px) {
+    .service {
+      padding: 5rem 0; }
+      .service-list {
+        display: block; }
+      .service-item {
+        width: 100%; }
+      .service-item-title {
+        margin-bottom: 1rem; }
+      .service-list:first-of-type {
+        margin-bottom: 4rem;
+        padding-bottom: 4rem; }
+      .service-item:not(:last-child) {
+        margin-bottom: 2rem; }
+      .service-item:not(:first-child) {
+        margin-left: 0; } }
+
+.device {
+  padding: 11rem 0 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.6))), url("../images/img-device-bg.png") no-repeat center/cover;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("../images/img-device-bg.png") no-repeat center/cover; }
+  .device-img {
+    margin: 0 auto -9.3rem;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%); }
+  @media screen and (max-width: 767px) {
+    .device {
+      padding-top: 5rem; }
+      .device-img {
+        max-width: 80%;
+        margin-bottom: -5rem; } }
+  @media screen and (max-width: 424px) {
+    .device-img {
+      margin-bottom: -4.5rem; } }
