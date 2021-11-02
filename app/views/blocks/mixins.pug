@@ -9,8 +9,8 @@ mixin menuItem(title, href="#")
 	li.header-menu-item
 		a.header-menu-link(href= href)= title
 
-mixin headerSlide(title, number, className="header-bottom-item")
-	div(class= className)
+mixin headerSlide(title, number, active = "")
+	.header-bottom-item(class= active)
 		span.header-bottom-number= number
 		span.header-bottom-text= title
 

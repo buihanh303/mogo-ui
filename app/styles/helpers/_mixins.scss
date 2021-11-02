@@ -61,3 +61,16 @@
   white-space: pre-wrap;
   word-break: break-word;
 }
+
+@mixin flexBox(
+  $align-items: stretch,
+  $justify-content: flex-start,
+  $direction: row,
+  $wrap: nowrap
+) {
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}

@@ -1,0 +1,73 @@
+.wedo {
+  padding: 11rem 0;
+  &-img {
+    width: 100%;
+  }
+  &-item-header {
+    @include flexBox(center);
+    border: 1px solid $gray-dark-color;
+    padding: 1.5rem;
+    cursor: pointer;
+  }
+  &-item-icon {
+    margin-right: 1.4rem;
+  }
+  &-item-title {
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  &-item-arrow {
+    margin-left: auto;
+    font-size: 3rem;
+    color: $gray-dark-color;
+  }
+  &-item-content {
+    padding: 2rem 2.2rem 2.4rem;
+    color: $text-color;
+    line-height: 1.6;
+    font-family: $secondary-font;
+    font-weight: 300;
+    font-size: 1.5rem;
+    font-style: italic;
+    border: 1px solid $gray-dark-color;
+    border-top: none;
+    display: none;
+  }
+  &-item-text {
+    height: 14.5rem;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: $gray-light-color;
+      border-radius: 3rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $third-color;
+      border-radius: 3rem;
+    }
+  }
+  &-item.is-active .wedo-item-content {
+    display: block;
+  }
+  &-item:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  @include minWidth(768px) {
+    &-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 3rem;
+    }
+  }
+  @include maxWidth(767px) {
+    padding: 5rem 0;
+    &-img {
+      margin-bottom: 1rem;
+    }
+  }
+}
