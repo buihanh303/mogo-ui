@@ -1,0 +1,79 @@
+.quote {
+  padding: 7rem 0;
+  background-color: $gray-color;
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-arrow {
+    color: $gray-dark-color;
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 1rem 2rem;
+  }
+  &-content {
+    @include flexBox(center);
+    padding: 0 5.5rem;
+  }
+  &-icon {
+    border: 3px solid $third-color;
+    padding: 4.2rem;
+    margin-right: 6rem;
+  }
+  &-info {
+    @include flexBox(stretch, space-between, column);
+  }
+  &-text {
+    font-size: 2.4rem;
+    font-family: $secondary-font;
+    font-weight: 300;
+    line-height: 1.5;
+    color: $text-color;
+    margin-bottom: 2.4rem;
+    @include textClamp(3);
+  }
+  &-author {
+    font-size: 2.4rem;
+    font-family: $third-font;
+    font-weight: 400;
+    padding-left: 7rem;
+    position: relative;
+  }
+  &-author::before {
+    content: "";
+    @include absolutePosition(vertical);
+    @include size(6rem, 3px);
+    background-color: $primary-color;
+    left: 0;
+  }
+  @include maxWidth(767px) {
+    padding: 5rem 0;
+    &-arrow {
+      display: none;
+    }
+    &-content {
+      padding: 0;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &-icon {
+      margin-right: 0;
+      padding: 3rem;
+      margin-bottom: 1rem;
+    }
+    &-text {
+      display: block;
+      font-size: 1.6rem;
+      line-height: 1.4;
+    }
+    &-author {
+      font-size: 1.6rem;
+    }
+  }
+  @include maxWidth(1023px) {
+    &-arrow {
+      display: none;
+    }
+  }
+}

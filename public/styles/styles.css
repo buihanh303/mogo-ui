@@ -573,3 +573,118 @@ body {
       padding: 5rem 0; }
       .wedo-img {
         margin-bottom: 1rem; } }
+
+.quote {
+  padding: 7rem 0;
+  background-color: #f8f8f8; }
+  .quote-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .quote-arrow {
+    color: #cccccc;
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 1rem 2rem; }
+  .quote-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding: 0 5.5rem; }
+  .quote-icon {
+    border: 3px solid #95e1d3;
+    padding: 4.2rem;
+    margin-right: 6rem; }
+  .quote-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap; }
+  .quote-text {
+    font-size: 2.4rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #999999;
+    margin-bottom: 2.4rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    max-width: 100%;
+    white-space: pre-wrap;
+    word-break: break-word; }
+  .quote-author {
+    font-size: 2.4rem;
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    padding-left: 7rem;
+    position: relative; }
+  .quote-author::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 6rem;
+    height: 3px;
+    background-color: #e98382;
+    left: 0; }
+  @media screen and (max-width: 767px) {
+    .quote {
+      padding: 5rem 0; }
+      .quote-arrow {
+        display: none; }
+      .quote-content {
+        padding: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
+      .quote-icon {
+        margin-right: 0;
+        padding: 3rem;
+        margin-bottom: 1rem; }
+      .quote-text {
+        display: block;
+        font-size: 1.6rem;
+        line-height: 1.4; }
+      .quote-author {
+        font-size: 1.6rem; } }
+  @media screen and (max-width: 1023px) {
+    .quote-arrow {
+      display: none; } }
