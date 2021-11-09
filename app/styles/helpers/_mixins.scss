@@ -74,3 +74,62 @@
   flex-direction: $direction;
   flex-wrap: $wrap;
 }
+
+@mixin hoverEffect($itemClass, $itemContent) {
+  #{$itemClass} {
+    // cursor: pointer;
+    position: relative;
+    transition: all 0.25s linear;
+    z-index: 1;
+    &::after {
+      content: "";
+      @include absoluteFull();
+      background-color: $third-color;
+      z-index: -1;
+      transition: all 0.25s linear;
+    }
+    &:hover {
+      transform: translate(-1rem, -1rem);
+      #{$itemContent} {
+        opacity: 1;
+        visibility: visible;
+      }
+      &::after {
+        transform: translate(1rem, 1rem);
+      }
+    }
+  }
+  #{$itemContent} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    @include absoluteFull();
+    background: linear-gradient(
+      to bottom,
+      rgba($primary-color, 0.8),
+      rgba($secondary-color, 0.8)
+    );
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s linear;
+  }
+}
+
+@mixin touchSlider($widthColumn: 85%, $gap: 2rem, $padding: 1rem) {
+  display: grid;
+  grid-template-columns: unset;
+  grid-auto-columns: $widthColumn;
+  grid-auto-flow: column;
+  grid-column-gap: $gap;
+  overflow-x: auto;
+  padding: $padding;
+  scroll-snap-type: x mandatory;
+  scroll-snap-stop: always;
+  @include hiddeScrollBar();
+  & > * {
+    scroll-snap-align: center;
+  }
+}

@@ -34,3 +34,29 @@ mixin serviceItem(src, title, desc)
 		.service-item-info 
 			h3.service-item-title= title 
 			p.service-item-text= desc
+
+mixin itemSocial(facebook="#", twitter="#", pinterest="#", instagram="#")
+	ul.team-social 
+		li.team-social-item 
+			a.team-social-link(href= facebook)
+				i.fab.fa-facebook-f.team-social-icon
+		li.team-social-item 
+			a.team-social-link(href= twitter)
+				i.fab.fa-twitter.team-social-icon
+		li.team-social-item 
+			a.team-social-link(href= pinterest)
+				i.fab.fa-pinterest-p.team-social-icon
+		li.team-social-item 
+			a.team-social-link(href= instagram)
+				i.fab.fa-instagram.team-social-icon
+
+mixin teamItem(src, name, position)
+	.team-item 
+			.team-main 
+				img(src= src, alt="team").team-img
+				.team-content 
+					if block 
+						block
+			.team-info 
+				h3.team-name= name
+				span.team-position= position

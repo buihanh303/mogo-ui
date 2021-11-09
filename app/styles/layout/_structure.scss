@@ -40,9 +40,14 @@
     line-height: 1.4;
     margin-bottom: 10rem;
   }
-  @include maxWidth(767px) {
+  @include maxWidth(1023px) {
     &-desc {
       margin-bottom: 5rem;
     }
   }
+  // @include maxWidth(767px) {
+  //   &-desc {
+  //     margin-bottom: 5rem;
+  //   }
+  // }
 }
