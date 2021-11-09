@@ -75,27 +75,31 @@
   flex-wrap: $wrap;
 }
 
-@mixin hoverEffect($itemClass, $itemContent) {
+@mixin hoverEffect($itemClass, $itemContent, $isTransition: "true") {
   #{$itemClass} {
     // cursor: pointer;
     position: relative;
     transition: all 0.25s linear;
     z-index: 1;
-    &::after {
-      content: "";
-      @include absoluteFull();
-      background-color: $third-color;
-      z-index: -1;
-      transition: all 0.25s linear;
+    @if $isTransition == "true" {
+      &::after {
+        content: "";
+        @include absoluteFull();
+        background-color: $third-color;
+        z-index: -1;
+        transition: all 0.25s linear;
+      }
     }
     &:hover {
-      transform: translate(-1rem, -1rem);
       #{$itemContent} {
         opacity: 1;
         visibility: visible;
       }
-      &::after {
-        transform: translate(1rem, 1rem);
+      @if $isTransition == "true" {
+        transform: translate(-1rem, -1rem);
+        &::after {
+          transform: translate(1rem, 1rem);
+        }
       }
     }
   }
