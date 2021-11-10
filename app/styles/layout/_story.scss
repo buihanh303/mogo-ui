@@ -1,0 +1,119 @@
+.story {
+  padding: 11rem 0;
+  background-color: white;
+  &-list {
+    @include flexBox();
+  }
+  &-item {
+    width: calc(33.33% - 1.5rem);
+  }
+  &-item:not(:last-child) {
+    margin-right: 3rem;
+  }
+  &-media {
+    position: relative;
+    @include size(100%, 24rem);
+  }
+  &-date {
+    position: absolute;
+    @include size(6.1rem, 6.9rem);
+    flex-shrink: 0;
+    bottom: 1rem;
+    left: 0;
+    z-index: 2;
+    transform: translateX(-1rem);
+    background-color: $third-color;
+    color: white;
+    @include flexBox(center, center, column);
+  }
+  &-date-number {
+    font-weight: bold;
+    font-size: 3rem;
+    display: inline-block;
+    margin-bottom: 0.6rem;
+  }
+  &-date-text {
+    font-family: $secondary-font;
+    font-size: 1.5rem;
+    font-style: italic;
+  }
+  &-img {
+    @include size(100%);
+    object-fit: cover;
+  }
+  &-title {
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 2rem 0;
+    @include textClamp(1);
+  }
+  &-content {
+    padding-bottom: 2.3rem;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 2rem;
+  }
+  &-desc {
+    font-family: $secondary-font;
+    color: $text-color;
+    line-height: 1.4;
+    font-size: 1.5rem;
+    @include textClamp(2);
+  }
+  &-meta,
+  &-meta-item {
+    @include flexBox();
+  }
+  &-meta-item:first-child {
+    margin-right: 1.8rem;
+  }
+  &-meta-icon {
+    margin-right: 0.6rem;
+  }
+  @include maxWidth(1023px) {
+    padding: 5rem 0;
+    &-media {
+      height: 17rem;
+    }
+    &-date {
+      @include size(5rem, 6rem);
+    }
+  }
+  @include maxWidth(767px) {
+    &-list {
+      display: block;
+    }
+    &-item {
+      width: 100%;
+    }
+    &-media {
+      height: auto;
+    }
+    &-item:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+  }
+}
+.map {
+  cursor: pointer;
+  padding: 5.7rem 0;
+  background: linear-gradient(to bottom, rgba(white, 0.8), rgba(white, 0.8)),
+    url("../images/img-map.png") no-repeat center / cover;
+  @include flexBox(center, center, column);
+  &-title {
+    font-weight: bold;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    color: $primary-color;
+    margin-top: 1.5rem;
+    padding-bottom: 2rem;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      @include absolutePosition("horizontal");
+      @include size(6rem, 4px);
+      background-color: $primary-color;
+    }
+  }
+}
