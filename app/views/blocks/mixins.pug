@@ -21,12 +21,12 @@ mixin blockBox(caption, title, desc)
 		if desc 
 			p.block-box-desc= desc
 
-mixin aboutItem(src, title, classIcon)
+mixin aboutItem(data)
 	.about-item 
-		img.about-image(src= src)
+		img.about-image(src= data.src)
 		.about-content 
-			i.about-icon(class= classIcon)
-			span.about-title= title
+			i.about-icon(class= data.classIcon)
+			span.about-title= data.title
 
 mixin serviceItem(src, title, desc)
 	.service-item 
