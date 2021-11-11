@@ -13,3 +13,12 @@ body {
   color: $title-color;
   font-size: 1.4rem;
 }
+input,
+button {
+  font-family: $primary-font;
+  line-height: 1;
+  outline: none;
+}
+button {
+  cursor: pointer;
+}

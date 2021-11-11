@@ -68,3 +68,13 @@ mixin workItem(src, title="creatively designed", desc="Lorem ipsum dolor sit")
 			img.work-icon(src="./images/img-work-icon.png", alt="work-icon")
 			h3.work-title= title
 			p.work-desc= desc
+
+mixin quoteItem(src="./images/img-quote.png", isIamge= true, desc="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut provident vel quaerat dolorum expedita nam impedit dolores fuga, animi velit maxime hic enim iste, modi consequatur voluptate beatae deserunt eligendi!", author="Jon Doe")
+	.quote-content 
+		if isIamge == true 
+			img.quote-icon(src= src, alt="quote")
+		else 
+			img.quote-image(src= src, alt="quote")
+		.quote-info 
+			p.quote-text= desc
+			span.quote-author= author

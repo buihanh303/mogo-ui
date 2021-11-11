@@ -1,0 +1,155 @@
+.footer {
+  background-color: $gray-color;
+  &-top {
+    padding: 7.4rem 0 7rem;
+  }
+  &-heading {
+    font-weight: 500;
+    text-transform: uppercase;
+    height: 3.4rem;
+    margin-bottom: 2.1rem;
+    &--logo {
+      transform: none;
+      font-size: 4.6rem;
+      font-weight: bold;
+      color: $gray-dark-color;
+    }
+  }
+  &-desc {
+    margin: 4rem 0;
+    font-size: 1.5rem;
+    font-family: $secondary-font;
+    line-height: 1.4;
+    color: $text-color;
+    @include textClamp(4);
+  }
+  &-follower {
+    padding-bottom: 1.6rem;
+    border-bottom: 1px solid #e5e5e5;
+    font-weight: 500;
+  }
+  &-follower strong {
+    font-weight: bold;
+    font-size: 1.8rem;
+  }
+  &-social {
+    @include flexBox(center);
+    font-size: 1.5rem;
+    font-style: italic;
+    font-family: $secondary-font;
+    font-weight: 300;
+    color: $text-color;
+    text-transform: capitalize;
+    margin: 1.5rem 0 3.5rem;
+  }
+  &-social-link {
+    margin-left: 1.1rem;
+  }
+  &-input {
+    padding: 1.4rem;
+    border: 1px solid #e5e5e5;
+    border-right: none;
+    width: 100%;
+    font-family: $secondary-font;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: $text-color;
+  }
+  &-form {
+    @include flexBox();
+    width: 100%;
+    max-width: 38rem;
+  }
+  &-button {
+    padding: 1.5rem 3.3rem;
+    color: white;
+    text-transform: uppercase;
+    background-color: $third-color;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  &-top {
+    @include flexBox();
+  }
+  &-column:first-child {
+    width: 46.3rem;
+  }
+  &-column:nth-child(2) {
+    width: 33.9rem;
+    margin-left: 4.8rem;
+  }
+  &-column:last-child {
+    width: 25.4rem;
+    margin-left: 8.5rem;
+  }
+  &-blog {
+    @include flexBox(center);
+    color: $title-color;
+  }
+  &-blog:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  &-blog-img {
+    @include size(12rem, 8.1rem);
+    object-fit: cover;
+    margin-right: 1.2rem;
+    flex-shrink: 0;
+  }
+  &-blog-title {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.4;
+    @include textClamp(2);
+  }
+  &-blog-date {
+    font-family: $secondary-font;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: $text-color;
+  }
+  &-images-list {
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    grid-template-rows: repeat(3, 33.33%);
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
+    margin-bottom: 1.7rem;
+  }
+  &-image {
+    @include size(100%, 100%);
+    object-fit: cover;
+  }
+  &-link-more {
+    color: $text-color;
+    font-size: 1.3rem;
+    font-style: italic;
+    font-family: $secondary-font;
+  }
+  &-bottom {
+    font-weight: 500;
+    padding: 2.3rem 0 2.1rem;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+    color: $title-color;
+    span {
+      color: $primary-color;
+    }
+  }
+  @include maxWidth(1023px) {
+    &-top {
+      padding: 5rem 0 2rem;
+      display: block;
+    }
+    &-column:not(:nth-child(10)) {
+      margin: 0 0 3rem;
+      width: 100%;
+    }
+    &-heading {
+      height: auto;
+    }
+  }
+}
