@@ -32,6 +32,7 @@
     border: 1px solid $gray-dark-color;
     border-top: none;
     display: none;
+    transition: all 0.5s linear;
   }
 
   &-item-text {

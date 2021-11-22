@@ -30,3 +30,33 @@ $(document).ready(function () {
     ],
   });
 });
+
+// show content
+const wedoParent = document.querySelectorAll(".wedo-item");
+
+wedoParent.forEach((element) => {
+  element.addEventListener("click", (event) => {
+    if (element.classList.contains("is-active")) {
+      element.classList.toggle("is-active");
+      element.children[0].children[2].classList.replace(
+        "fa-angle-up",
+        "fa-angle-down"
+      );
+    } else {
+      wedoParent.forEach((item) => {
+        if (item.classList.contains("is-active")) {
+          item.classList.remove("is-active");
+          item.children[0].children[2].classList.replace(
+            "fa-angle-up",
+            "fa-angle-down"
+          );
+        }
+      });
+      element.classList.toggle("is-active");
+      element.children[0].children[2].classList.replace(
+        "fa-angle-down",
+        "fa-angle-up"
+      );
+    }
+  });
+});

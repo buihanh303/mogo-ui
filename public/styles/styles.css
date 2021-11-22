@@ -558,7 +558,9 @@ button {
     font-style: italic;
     border: 1px solid #cccccc;
     border-top: none;
-    display: none; }
+    display: none;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear; }
   .wedo-item-text {
     height: 14.5rem;
     overflow-y: auto;
